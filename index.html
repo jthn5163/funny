@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whatsapp API</title>
+
+  <style>
+    body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+      align-items: center;
+      background-color: cadetblue;
+      height: 100vh;
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button{
+      height: 3rem;
+      width: 8rem;
+      background-color: tomato;
+      border-radius: 1.5rem;
+      border: none;
+      box-shadow: 2px 2px 5px black;
+      color: white;
+      transition: 0.2s ease;
+      font-size: 1rem;
+    }
+
+    button:hover{
+        transform: scale3d(1.15 ,1.15 ,1.05 );
+    }
+
+    button:active{
+        transform: scale3d(1.05 ,1.05 ,1.05 );
+        box-shadow: none;
+        font-size: 0.95rem;
+    }
+
+    h2{
+      font-size: 2rem;
+      font-family: cursive;
+    }
+
+    img{
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="heading">Click</h2>
+    <img id="image" src="https://res.cloudinary.com/dlqrmrjtw/image/upload/v1744986026/mfinger_qn0538.png" />
+    <button id="whatsappSend">
+      Click
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('whatsappSend').addEventListener('click', function() {
+      // Display the image
+      document.getElementById('image').classList.add('show');
+      
+      // Hide the button and heading
+      document.getElementById('whatsappSend').classList.add('hide');
+      document.getElementById('heading').classList.add('hide');
+    });
+  </script>
+</body>
+</html>
